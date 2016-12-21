@@ -1,3 +1,19 @@
+	* {
+		margin: 0;
+	}
+	html,body {
+		height: 100%;
+	}
+	.wrapper {
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 auto -4em;
+		margin-top: 5%;
+	}
+	.footer, .push {
+		height: 4em;
+	}
 	header {
 		background-image: url("images/bluebark.jpg");
 		background-size: cover;
@@ -7,8 +23,9 @@
 
 	nav {
 		background-color: rgba(211,211,211,0.75);
-		font-size: 20px;
+		font-size: 24pt;
 		word-spacing: 50px;
+		font-weight: bold;
 	}
 
 	img {
@@ -22,17 +39,19 @@
 		padding: 0px;
 		text-align: center;
 		letter-spacing: 10px;
-		font-size: 40px;
+		font-size: 50pt;
+		word-spacing: 10px;
 		background-color: rgba(32,178,170,0.85);
 	}
 
 	body {
-		font-family: 'Athiti', serif;
-		color: darkslategrey;
+		color: rgb(0,0,0);
 		text-align: center;
 		padding-bottom: 50px;
-		font-size: 15px;
+		font-size: 26pt;
 		margin: 0%;
+		word-spacing: 5px;
+		background: rgb(255,255,255);
 	}
 
 	p {
@@ -53,7 +72,7 @@
 		padding-bottom: 1px;
 		background-color: rgba(32,178,170,1);
 		color: white;
-		font-size:	14pt;
+		font-size:	20pt;
 		text-align: center;
 		margin-top: 10%;
 	}
@@ -65,4 +84,3 @@
 		display: block;
 		padding: 5px;
 	}
-	

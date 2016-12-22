@@ -8,11 +8,11 @@
 		min-height: 100%;
 		height: auto !important;
 		height: 100%;
-		margin: 0 auto -4em;
+		margin: 0 auto -1em;
 		margin-top: 5%;
 	}
 	.footer, .push {
-		height: 4em;
+		height: 1em;
 	}
 	header {
 		background-image: url("images/bluebark.jpg");
@@ -26,7 +26,7 @@
 		font-size: 24pt;
 		word-spacing: 50px;
 		font-weight: bold;
-	}
+		}
 
 	img {
 		margin: 20px 0;
@@ -69,17 +69,14 @@
 		text-decoration: none;
 	}
 	footer {
-		padding-bottom: 1px;
 		background-color: rgba(32,178,170,1);
 		color: white;
 		font-size:	20pt;
+		word-spacing: 10px;
 		text-align: center;
-		margin-top: 10%;
 	}
 @media (max-width: 500px) {
-	h1 {
-		font-size: 36px;
-	}
+
 	li {
 		display: block;
 		padding: 5px;

@@ -32,6 +32,8 @@
 		margin: 20px 0;
 		border: 7px solid white;
 		border-radius: 180px;
+		width: 200px;
+		height: 200px;
 	}
 
 	h1 {
@@ -80,3 +82,30 @@
 		display: block;
 		padding: 5px;
 	}
+	form {
+		background: rgba(220,220,220,.50);
+		border: solid darkturquoise;
+		margin: 5% 20% 5% 20%;
+		padding-bottom: 5%;
+		word-spacing: 5px;
+	}
+	input {
+		text-align: center;
+		font-size: 14pt;
+		width: 300px;
+	}
+	input[name="text"] {
+		height: 200px;
+	}
+	input[type="checkbox"] {
+		width: 10px;
+	}
+	input[type="button"] {
+		background: rgb(0,206,209);
+		height: 50px;
+		width: 120px;
+		margin-top: 5%;
+		font-family: 'Amatic SC', cursive;
+		font-size: 20pt;
+		font-weight: bold; 
+		}

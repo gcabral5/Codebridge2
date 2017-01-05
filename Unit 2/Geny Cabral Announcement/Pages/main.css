@@ -1,0 +1,44 @@
+header {
+	background-color: rgba(255,255,255,.75);
+	color: black;
+	font-family: 'Jura', sans-serif;
+	height: 175px;
+}
+body {
+	background: url("images/langwall.jpg");
+	background-size: cover;
+	background-repeat: repeat-x;
+	font-family: 'Jura', sans-serif;
+	font-size: 18pt;
+	color: white;
+	text-align: center;
+}
+footer {
+	background-color: rgba(255,255,255,.75);
+}
+.nav {
+	position: absolute;
+}
+h1 {
+	font-size: 75pt;
+	letter-spacing: 40px;
+	padding-top: 2%;
+	margin-bottom: 0%;
+	margin-top: 0%;
+}
+h2 {
+	font-size: 15pt;
+	letter-spacing: 30px;
+	padding-bottom: 15%;
+	margin-top: 0%;
+}
+#syn {
+	background-color: rgba(0,0,0,.55);
+	margin: 5%;
+	padding: 5%;
+	font-size: 24pt;
+}
+#let {
+	font-size: 50pt;
+	color: black;	
+}

@@ -46,8 +46,9 @@ h5 {
 #syn {
 	background-color: rgba(0,0,0,.55);
 	margin: 10%;
+	margin-top: 30%;
 	padding: 5%;
-	font-size: 24pt;
+	font-size: 18pt;
 }
 #let {
 	font-size: 50pt;
@@ -140,6 +141,9 @@ footer {
 }
 .navcontent a:hover {
 	background-color: #f1f1f1;
+	color: rgb(128,0,0);
+	font-size: 16pt;
+	font-family: 'Jura', bold;
 }
 #filmcon, #castcon, #toolscon, #rescon {
 	display: none;

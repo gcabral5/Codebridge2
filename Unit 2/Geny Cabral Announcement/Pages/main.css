@@ -15,9 +15,6 @@ body {
 	color: white;
 	text-align: center;
 }
-footer {
-	background-color: rgba(255,255,255,.75);
-}
 h1 {
 	font-size: 75pt;
 	letter-spacing: 40px;
@@ -41,7 +38,7 @@ a {
 }
 .menuit {
 	font-size: 12pt;
-	line-height: 25px;
+	line-height: 40px;
 }
 #syn {
 	position: absolute;
@@ -102,8 +99,7 @@ input[type="button"]:hover {
 }
 
 footer {
-	background: url("images/liquidink.gif");
-	background-size: cover;
+	background-color: rgba(255,255,255,.75);
 	color: black;
 	height: 2%;
 	text-decoration: none;
@@ -129,9 +125,9 @@ footer {
 	display: none;
 	position: absolute;
 	color: white;
-	background-color: rgba(0,0,0,0.75);
+	background-color: rgba(0,0,0,0);
 	min-width: 250px;
-	line-height: 60px;
+	line-height: 50px;
 	margin: 0px;
 	text-align: center;
 	font-size: 30pt;
@@ -154,6 +150,9 @@ footer {
 	font-family: 'Jura', sans-serif bold;
 	border-radius: 45px;
 }
+#tsl:hover {
+	font-size: 15pt;
+}
 #return {
 	background-color: rgba(0,0,0,.45);
 	float: left;
@@ -168,6 +167,8 @@ footer {
 }
 .men1 {
 	font-size: 28pt;
+	background-color: rgba(0,0,0,.45);
+	border-radius: 50%;
 }
 .men1:hover {
 	color: maroon;
@@ -194,7 +195,6 @@ footer {
 			display: none;
 		}
 		table {
-			background-color: rgba(0,0,0,.40);
 			margin: 0% 10% 0% 15%;
 			height: 600px;
 			width: 900px;

@@ -4,60 +4,62 @@
 	<title></title>
 	<link href="https://fonts.googleapis.com/css?family=Jura:300" rel="stylesheet">
 	<style type="text/css">
-		body {
-			background-image: url("images/langwall.jpg");
+		#imgback {
+			background-image: url("images/langwallinv.jpg");
 			background-size: cover;
 			font-family: 'Jura', sans-serif;
+			font-size: 19pt;
+			text-align: center;
 			color: white;
-			font-size: 20pt;
-		}
-		#navtable {
-			background-image: url("images/ink.gif");
-			background-size: cover;
-			height: 600px;
-			width: 600px;
-			margin: 0;
-		}
-		div {
-			background: rgba(10,10,10,.40);
 		}
 		a {
 			text-decoration: none;
 		}
-		#landimg, #spwc, #entrylogc, #cform, #eccimg, #castlist, #synop, #show, #story {
+		h3 {
+			background: rgba(0,0,0,.45);
+		}
+		#landimg, #spwc, #entrylogc, #cform, #eccimg {
 			display: none;
 		}
 		table {
-			border: solid red;
-			height: 700px;
-			width: 800px;
+			background-color: rgba(0,0,0,.40);
+			margin: 0% 15% 0% 15%;
+			height: 600px;
+			width: 900px;
+			border-radius: 25%;
 		}
-		td {
-			border: solid purple;
-			height: 200px;
-			width: 200px;
+		.contd {
+			background: url("images/langlogwhite2sm.png") no-repeat;
+			background-size: cover;
+			background-position: center;
 		}
-		#entimg {
-			float: center;
+		#ecc, #spw {
+			font-size: 17pt;	
+		}
+		#sp, #ec {
+			background-size: contain;
 		}
 	</style>
 </head>
 <body>
-
-<div id="navtable">
+<div id="imgback">
 <table>
-	<tr>
-		<td><div id="land"><h3>SIGHTINGS</h3><div id="landimg"><img src="arrival2.jpg"></div></div></td>
-
-		<td><div id="top"><h3>Top Logo</h3><div id="topimg"><img src="top.png"></div></div></td>
-
-		<td><div id="spw"><h3>SAPIR-WHORF HYPOTHESIS</h3><div id="spwc"><p>a theory developed by Edward Sapir and Benjamin Lee Whorf that states that the structure of a language determines or greatly influences the modes of thought and behavior characteristic of the culture in which it is spoken. Expand. Also called Whorfian hypothesis. See also: <a href="https://en.wikipedia.org/wiki/Linguistic_relativity">Linguistic Relativity</a></p></div></div></td>
+	<tr id="tr1">
+		<td class="blanktd"></td>
+		<td class="contd" id="la" rowspan="2"><div id="land"><h3>SIGHTINGS</h3></div></td>
+		<td class="blanktd"></td>
+		<td class="blanktd"></td>
+	</tr>
+	<tr id="tr2">
+		<td class="blanktd"></td>
+		<td class="blanktd"></td>
+		<td class="contd" id="sp" colspan="2"><div id="spw"><h3>SAPIR-WHORF HYPOTHESIS</h3><div id="spwc"><p>a theory developed by Edward Sapir and Benjamin Lee Whorf that states that the structure of a language determines or greatly influences the modes of thought and behavior characteristic of the culture in which it is spoken. Expand. Also called Whorfian hypothesis. See also: <a href="https://en.wikipedia.org/wiki/Linguistic_relativity">Linguistic Relativity</a></p></div></div></td>
 	</tr>
 
-	<tr>
-		<td><div id="r2l"><h3>R2L Img</h3><div id="r2limg"><img src="images/r2l.png"></div></div></td>
-
-		<td><div id="ent"><div id="entimg"><img src="images/coffee2-200.png"></div><h3>ENTRY LOG</h3><div id="entrylogc">
+	<tr id="tr3">
+		<td class="blanktd"></td>
+		<td class="blanktd"></td>
+		<td class="contd" id="en"><div id="ent"><h3>ENTRY LOG</h3><div id="entrylogc">
 		<h3>ENTRY LOG</h3>
 		<p>Dr. L. Banks 22:45</p>
 		<p>Language is the foundation of civilization. It is the glue that holds a people together, and it is the first weapon drawn in a conflict. It's been months as it seems my attempts to teach the heptpodes basic English have been a complete failure.</p>
@@ -66,12 +68,11 @@
 		<p><b>Is this how they think?</b></p>
 		<p>Imagine you wanted to write a sentence using 2 hands, starting from either side. You have to know each word you wanted to use, as well as how much space they will occupy. A heptpode can write a complex sentence
 		in two seconds effortlessly.</p></div></div></td>
-		
-		<td><div id="r2r"><h3>R2R Img</h3><div id="r2rimg"><img src="images/r2r.png"></div></div></td>
+		<td class="blanktd"></td>
 	</tr>
 
-	<tr>
-		<td><div id="con"><h3>UPDATES</h3>
+	<tr id="tr4">
+		<td class="contd" id="co" colspan="2"><div id="con"><h3>UPDATES</h3>
 			<div id="cform">
 				<form>
 					<div id="formt">
@@ -89,12 +90,17 @@
 				</form>
 			</div></div>
 		</td>
+		<td class="blanktd"></td>
+		<td class="contd" id="ec" rowspan="2"><div id="ecc"><h3>ENGLISH-TO-HEPTAGRAM CONVERTER</h3><div id="eccimg"><img src="images/engtohep.png"></div></div></td>
+	</tr>
 
-		<td><div id="r2r"><h3>R2R Img</h3><div id="r2rimg"><img src="images/r2r.png"></div></div></td>
-
-		<td><div id="ecc"><h3>ENGLISH-TO-HEPTAGRAM CONVERTER</h3><div id="eccimg"><img src="images/engtohep.png"></div></div></h3></td>
+	<tr id="tr4">
+		<td class="blanktd"></td>
+		<td class="blanktd"></td>
+		<td class="blanktd"></td>		
 	</tr>
 </table>
+</div>
 
 </body>
 </html>

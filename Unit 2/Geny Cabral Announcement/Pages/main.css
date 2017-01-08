@@ -212,3 +212,7 @@ footer {
 		#sp, #ec {
 			background-size: contain;
 		}
+#landings {
+	position: absolute;
+	display: none;
+}

@@ -99,7 +99,8 @@ input[type="button"]:hover {
 }
 
 footer {
-	background-color: rgba(255,255,255,.75);
+	background: url("images/inky2.gif") no-repeat;
+	background-position: left;
 	color: black;
 	height: 2%;
 	text-decoration: none;
@@ -195,7 +196,7 @@ footer {
 			display: none;
 		}
 		table {
-			margin: 0% 10% 0% 15%;
+			margin: 0% 8% 0% 15%;
 			height: 600px;
 			width: 900px;
 			border-radius: 25%;

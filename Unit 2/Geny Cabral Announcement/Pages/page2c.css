@@ -1,0 +1,191 @@
+body {
+	background: url("images/langwall.jpg");
+	background-size: cover;
+	font-family: "Jura", sans-serif;
+	text-align: center;
+	margin: 0px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+header {
+	background-color: rgba(245,245,245,.75);
+}
+#navbutton {
+	background: url("images/langlog2.png") no-repeat;
+	background-size: cover;
+	width: 190px;
+	height: 200px;
+	position: absolute;
+	left: 4%;
+	top:0%;
+	border: none;
+}
+#navigation {
+	position: absolute;
+	display: inline-block;
+	left: 4%;
+}
+#navigation:hover #navbutton {
+	background: url("images/langlogred3.png") no-repeat;
+	background-size: cover;
+	transition: 3s;
+	width: 190px;
+	height: 200px;
+}
+#navcontent {
+	display: none;
+	position: absolute;
+	margin-top: 195px;
+	margin-left: 10px;
+	line-height: 30px;
+	min-width: 250px;
+
+}
+#navigation:hover #navcontent {
+	display: block;
+	position: absolute;
+}
+#navcontent a {
+	display: block;
+}
+.menutitle {
+	background-color: rgba(0,0,0,.50);
+	border-radius: 50%;
+	font-size: 26pt;
+	color: white;
+}
+.menutitle:hover {
+	color: maroon;
+}
+.menuitem {
+	font-size: 18pt;
+}
+.menuitem:hover {
+	font-size: 24pt;
+	background-color: rgba(120,120,120,.50);
+	color: maroon;
+	border-radius: 45%;
+}
+#tsl {
+	font-size: 16pt;
+}
+#tsl:hover {
+	font-size: 22pt;
+}
+#headertitle {
+	display: inline-block;
+	line-height: 2px;
+	text-align: left;
+	margin-right: 41%;
+	margin-top: 3%;
+}
+#maintitle {
+	font-size: 78pt;
+	letter-spacing: 35px;
+}
+#maindate {
+	margin-left: 30%;
+	margin-bottom: 5%;
+	letter-spacing: 15px;
+}
+#maintable {
+	background: url("images/langwallinv.jpg");
+	background-size: cover;
+	width: 750px;
+	height: 490px;
+	margin-left: 40%;
+	border-radius: 30px;
+	padding-left: 20px;
+}
+#maintable a {
+	color: white;
+	font-size: 24pt;
+	background-color: rgba(75,75,75,.75);
+}
+.contd {
+	background: url("images/langlogwhite2sm.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.maincontent {
+	background-color: rgba(0,0,0,.75);
+	color: white;
+	font-size: 25pt;
+	height: 800px;
+	width: 900px;
+	margin-left: 15%;
+	margin-top: 10%;
+	margin-bottom: 30%;
+	text-align: center;
+	padding: 5px 10px;
+}
+.let {
+	font-size: 50pt;
+	color: black;	
+}
+
+#log {
+	font-size: 18pt;
+	height: 900px;
+}
+form {
+		border: none;
+		margin: 5% 20% 5% 20%;
+		padding-bottom: 2%;
+		padding-top: 1%;
+		word-spacing: 5px;
+}
+input {
+		text-align: center;
+		font-size: 14pt;
+		width: 300px;
+	}
+input[name="text"] {
+		height: 200px;
+	}
+input[type="checkbox"] {
+		width: 10px;
+	}
+input[type="button"] {
+		background: rgba(100, 100, 100, .75);
+		height: 50px;
+		width: 120px;
+		margin-top: 5%;
+		font-family: 'Jura', sans-serif;
+		font-size: 14pt;
+		font-weight: bold;
+	}
+input[type="button"]:hover {
+	background: rgba(128, 0, 0, .50);
+}
+footer {
+	position: absolute;
+	margin-top: 70%;
+	margin-left: 0%;
+	margin-right: 0%;
+	width: 100%;
+	background: url("images/inky2.gif") no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-size: 20pt;
+}
+#filmby, #paramount {
+	display: block;
+}
+#filmby:hover, #paramount:hover {
+	color: white;
+}
+
+#return a {
+	position: absolute;
+	margin-bottom: 50%;
+	margin-right: 30%;
+	height: 500px;
+	width: 300px;
+	font-size: 16pt;
+}
+#return a:hover {
+	color: white;
+}

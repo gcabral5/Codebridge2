@@ -74,45 +74,52 @@
 			border-radius: 25px;
 			margin: 8px auto;
 			border: double purple;
-
+		}
+		#all {
+			
+		}
 	</style>
 </head>
+<div id="all">
 <header>
-	<img id="k" src="kanye.jpg"> KANYE'S NEW WORKOUT PLAN
+	<img id="k" src="images/kanye.jpg"> KANYE'S NEW WORKOUT PLAN
 </header>
 <body>
 
-<img id="new" src="new.png">
+<img id="new" src="images/new.png">
 
 <script type="text/javascript">
 	window.alert('Are you tired of dating the same bummy dudes over and over again?');
 </script>
 
-<h3>LADIES, ARE YOU TIRED OF DATING THE FOLLOWING TYPES: ASHY, BUMS, HOTEPS, #$%^BOYS?
-</h3>
+<h3>LADIES, ARE YOU TIRED OF DATING THE FOLLOWING TYPES: ASHY, BUMS, HOTEPS, #$%^BOYS?</h3>
 
-<p id="int">With Kanye's Get Right For The Summer Plan, you'll be dating ballers in no time!</p>
+<p id="int" style="display:none">With Kanye's Get Right For The Summer Plan, you'll be dating ballers in no time!</p>
+<button type="button" onclick="document.getElementById('int').setAttribute ('style','display:block;border:double purple;height:500px;width:100%;position:absolute;font-size:50pt;lineheight:1000px')='block'">What You Need</button>
 
-<img id="testimonial" src="test2.gif">
+<img id="testimonial" src="images/test2.gif">
 <br>
-<button onclick="document.getElementById('testimonial').src='halle.jpg'">Before - Oh No Gurl!</button>
-<button onclick="document.getElementById('testimonial').src='hallenow.jpg'">After - Daaayum!!!</button>
+<button onclick="document.getElementById('testimonial').src='images/halle.jpg'">Before - Oh No Gurl!</button>
+<button onclick="document.getElementById('testimonial').src='images/hallenow.jpg'">After - Daaayum!!!</button>
 
 <p id="test">If you don't believe us, check out this testimonial from one of our satisfied clients:</p>
 <button type="button" onclick="document.getElementById('test').innerHTML='Hi, my name is Jill, I just want to say thanks to Kanyes workout plan. I was able to pull a basketball player and like now I shop every day on Rodeo drive I just want to say, thank you Kanye! Woooo!'">Click For A Testimonial!!</button>
 </div>
 
-<img id="callsign" src="callout.png">
+<img id="callsign" src="images/callout.png">
 
 <audio id="kaudio" autoplay="autoplay" controls="controls" loop>    
-		<source src="kanyew.mp3"/>  
+		<source src="images/kanyew.mp3"/>  
 </audio>
 
 <script type="text/javascript">
 	console.log("This page is actually a joke. I do not support Kanye West (though College Dropout will be my forever jam). He is in fact embodiment of an ashy $%^&boy.")
 </script>
+
+
 </body>
 <footer>
 	Disclaimer: Results above are atypical and not guaranteed. Unless you actually are Halle Berry.
 </footer>
+</div>
 </html>

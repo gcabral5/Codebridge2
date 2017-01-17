@@ -134,6 +134,30 @@
 
 			}
 			var myHour = document.getElementById('hou');
+			myHour.textContent = h;
+			myHour.innerHTML = h;
+			horas = document.getElementById('hh');
+			
+			/*var myMin = document.getElementById('mmin');
+			myMin.textContent = m;
+			myMin.innerHTML = m;
+			minus = document.getElementById('mm');
+			
+			var mySec = document.getElementById('seco');
+			mySec.textContent = s;
+			mySec.innerHTML = s;
+			segun = document.getElementById('ss');*/
+		};
+
+		renderTime();
+					function noice(myHour,horas) {
+				if (myHour === horas) /*&& (myMin === minus) &&(mySec === segun)*/ {
+					window.alert("Hooray!!")
+				}
+				else{
+					window.alert("booo")
+				}
+			};
 			/*var myClock = document.getElementById('clockDisplay');
 			myClock.textContent = h + ":" + m + ":" + s + " " + diem;
 			myClock.innerText = h + ":" + m + ":" + s + " " + diem;			

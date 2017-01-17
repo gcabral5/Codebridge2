@@ -27,7 +27,7 @@
 		height: 100px;
 		width: 500px;
 		top: 30%;
-		left: 30%;
+		left: 50%;
 		border-radius: 30px;
 	}
 	#setTime {
@@ -71,6 +71,7 @@
 	}
 	</style>
 	<script type="text/javascript">
+	
 var musicsrc="sorry.mp3"
 
 	now = new Date();
@@ -101,9 +102,9 @@ if (hour==00) {
  }
 
  document.getElementById("hours") = hour;
-  document.minutes.clock.value = min;
-  document.seconds.clock.value = sec;
-  document.ampm.clock.value= add;
+  document.getElementById("minutes") = min;
+  document.getElementById("seconds") = sec;
+  document.getElementById("ampm") = add;
  setTimeout("myTime()", 1000);
 
 }
@@ -150,7 +151,9 @@ function alarm() {
  if (apm != 'am' && apm != 'pm' ) {alert('The am/pm is wrongly typed.'); return false}
 
  setTimeout("alarm()", 1000);}
-/*
+
+	/* This is the part that I'm struggling with, getting the current time to show automatically...
+
 		function renderTime() {
 			var currentTime = new Date();
 			var diem = "AM";
@@ -175,11 +178,10 @@ function alarm() {
 				s = "0" + s;
 
 			}
-			var myClock = document.getElementById('clockDisplay');
+			var myClock = document.getElementById("clockDisplay");
 			myClock.textContent = h + ":" + m + ":" + s + " " + diem;
 			myClock.innerText = h + ":" + m + ":" + s + " " + diem;			
 			setTimeout('renderTime()',1000);
-
 		};
 		renderTime();*/
 </script>
@@ -187,7 +189,7 @@ function alarm() {
 </head>
 <body>
 
-<!--<div class="clockStyle" id="clockDisplay"></div>-->
+<div class="clockStyle" id="clockDisplay"></div>
 <form>
      <table id="allTime">
 	    <tr>

@@ -3,58 +3,242 @@
 <head>
 	<title>Basic Alarm</title>
 	<style type="text/css">
-		.clockStyle {
-			background-color: #000;
-			border:#999 2px inset;
-			padding:6px;
-			color:#0FF;
-			font-family: "Arial Black", Gadget, sans-serif;
-			font-size: 16px;
-			font-weight:bold;
-			letter-spacing: 2px;
-			display:inline;
-		}
+	body {
+		background: url("black_scales.png");
+		font-family: "Century Gothic", sans-serif;
+		font-size: 14pt;
+		color: #0ff;
+	}
+	.clockStyle {
+		background-color: #000;
+		border: #999 2px inset;
+		padding: 6px;
+		color: #0ff;
+		font-family: "Alarm Clock", Arial, sans-serif;
+		font-size: 75px;
+		font-weight: bold;
+		letter-spacing: 5px;
+	}
+	#burp, #hh, #mm, #ss, #di {
+		display: inline;
+	}
+	#clockDisplay {
+		position: absolute;
+		height: 100px;
+		width: 500px;
+		top: 30%;
+		left: 30%;
+		border-radius: 30px;
+	}
+	#setTime {
+		background-color: rgba(50,50,50,.75);
+		position: absolute;
+		height: 25px;
+		width: 400px;
+		top: 48%;
+		left: 32%;
+		padding: 1%;
+		text-align: center;
+		border-radius: 20px;
+	}
+	input[type="text"] {
+		width: 100px;
+	}
+	input[type="button"] {
+		font-family: "Century Gothic", sans-serif;
+		background-color: rgba(0,0,0,.50);
+		color: white;
+		width: 120px;
+		height: 50px;
+		border-radius: 20px;
+		font-size: 16pt;
+		padding: 1%;
+	}
+	td {
+		line-height: 35px;
+	}
+	input[type="checkbox"] {
+		display: inline;
+	}
+	p {
+		margin: 0 auto;
+	}
+	.clocky {
+		width: 75px;
+		height: 50px;
+		border: solid red;
+		display: inline;
+	}
 	</style>
 </head>
 <body>
-<div id="clockDisplay" class="clockStyle"></div>
-<div id="setMine" class="timer">
-<form> <input id="hh" type="text">:<input id="mm" type="text">:<input id="ss" type="text"></form>
-</div>
-<script type="text/javascript">
-function renderTime() {
-	var currentTime = new Date();
-	var diem = "AM";
-	var h = currentTime.getHours();
-	var m = currentTime.getMinutes();
-	var s = currentTime.getSeconds();
 
-	if(h === 0) {
-		h = 12;
+	<div id="clockDisplay" class="clockStyle">
+		<div class="clocky" id="hou"></div><div class="clocky">:</div><div class="clocky" id="mmin"></div><div class="clocky">:</div><div class="clocky" id="seco"></div><div class="clocky"> </div><div class="clocky" id="ap"></div>
+	</div>
 
-	} else if (h > 12) {
-		h = h - 12;
-		diem = "PM";
-	}
-	if(h < 10) {
-		h = "0" + h;
-	}
-	if(m < 10) {
-		m = "0" + m;
-	}
-	if(s < 10) {
-		s = "0" + s;
+        <table id="setTime">
+
+        <tr>
+	      <td><p>Hr</p></td>
+	      <td><p>Min</p></td>
+	      <td><p>Sec</p></td>
+	      <td><p>AM/PM</p></td>
+        </tr>
+
+	    <tr>
+	      <td><input type="text" id="hh" placeholder="HH"/></td>
+	      <td><input type="text" id="mm" placeholder="MM"/></td>
+	      <td><input type="text" id="ss" placeholder="SS"/></td>
+	      <td><input type="text" id="dd" placeholder="AM/PM"/></td>
+	    </tr>
+	    	<td colspan="4">
+         	<p>Play music?</p>
+         	<input type="checkbox" name="C1" value="ON" onClick="soundcheck()">
+			</td>
+	    </tr>
+
+        <tr>
+	      <td colspan="2">
+	      <input type="button" value="Set Alarm" onClick="noice()"/>
+	      </td>
+	      <td colspan="2">
+	      <input type="button" value="Reset" onClick="reset()"/>
+	      </td>
+	    </tr>
+	 </table>
+	<script type="text/javascript">
+
+		function renderTime() {
+			var currentTime = new Date();
+			var diem = "AM";
+			var h = currentTime.getHours();
+			var m = currentTime.getMinutes();
+			var s = currentTime.getSeconds();
+
+			if (h == 0) {
+				h = 12;
+			} 
+			else if (h > 12) {
+				h = h - 12;
+				diem = "PM";
+			}
+			if (h < 10) {
+				h = "0" + h;
+			}
+			if (m < 10) {
+				m = "0" + m;
+			}
+			if (s < 10) {
+				s = "0" + s;
+
+			}
+			var myHour = document.getElementById('hou');
+			/*var myClock = document.getElementById('clockDisplay');
+			myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+			myClock.innerText = h + ":" + m + ":" + s + " " + diem;			
+			setTimeout('renderTime()',1000);
+		}
+		renderTime();*/
+/*
+			function rightTime() {
+				var now = new Date();
+				var hour = now.getHours();
+				var minu = now.getMinutes();
+				var secs = now.getSeconds();
+				}
+			document.hours.clock.value = (hour<=9) ? "0"+hour : hour;
+  			document.minutes.clock.value = min;
+  			document.seconds.clock.value = sec;
+  				document.ampm.clock.value= add;
+ 				setTimeout("sivamtime()", 1000);
+		};
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+var sHour = document.getElementByID("hh").value;
+	sMin = document.getElementByID("mm").value;
+	sSec = document.getElementByID("ss").value;
+	sDi = document.getElementByID("dd").value;
+var compare = function(hour) {
+	if((sHour === h) && (sMin === m) && (sSec === s) && (sDi === diem) {
+
+	
+
 	}
 
-	var myClock = document.getElementById("clockDisplay");
-	myClock.textContent = h + ":" + m + ":" + s + " " + diem;
-	myClock.innerText = h + ":" + m + ":" + s + " " + diem;
-	setTimeout("renderTime ()",1000);
+
 }
-renderTime();
-function setMine {
-	if()
+
+
+  document.hours.clock.value = (hour<=9) ? "0"+hour : hour;
+  document.minutes.clock.value = min;
+  document.seconds.clock.value = sec;
+  document.ampm.clock.value= add;
+ setTimeout("sivamtime()", 1000);
+
+}*/
+//----ALARM CODE--//
+/*
+var musicsrc="images/kanyew.mp3"
+playit = false
+function playmusic(){
+musicwin=window.open("","","width=100,height=100")
+if (navigator.appName=="Microsoft Internet Explorer")
+musicwin.document.write('<bgsound src='+'"'+musicsrc+'"'+' loop="infinite">')
+else
+musicwin.document.write('<embed src=\"'+musicsrc+'\" hidden="true" border="0" width="20" height="20" autostart="true" loop="true">')
+musicwin.document.close()
 }
-</script>
+
+function soundcheck(cbox){
+playit=cbox.checked
+}
+
+function alarm() {
+
+    hrs = document.setTime.hh.value;
+    min = document.setTime.mm.value;
+    seg = document.setTime.ss.value;
+    apm = document.setTime.dd.value;
+
+ if ((h == hrs) &&
+    (m == min) &&
+    (s == apm)) {
+     if (playit)
+     playmusic();
+
+ if (hrs == '') {alert('The Hour field is empty'); return false}
+ if (min == '') {alert('The Minute field is empty'); return false}
+ if (apm == '') {alert('The am/pm field is empty'); return false}
+
+ if (hrs.length == 1) {document.arlm.hr.value = '0' + hrs}
+ if (min.length == 1) {document.arlm.mts.value = '0' + min}
+ if (hrs.length > 2) {alert('Invalid hr'); return false}
+ if (min.length > 2) {alert('Invalid min'); return false}
+ if (apm != 'am' && apm != 'pm' ) {alert('Invalid am/pm'); return false}
+
+ setTimeout("alarm()", 1000);}
+*/
+	</script>
+
 </body>
 </html>

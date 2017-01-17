@@ -2,8 +2,263 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+	body {
+		background: url("black_scales.png");
+		font-family: "Century Gothic", sans-serif;
+		font-size: 14pt;
+		color: #0ff;
+	}
+	.clockStyle {
+		background-color: #000;
+		border: #999 2px inset;
+		padding: 6px;
+		color: #0ff;
+		font-family: "Alarm Clock", Arial, sans-serif;
+		font-size: 75px;
+		font-weight: bold;
+		letter-spacing: 5px;
+	}
+	#burp, #hh, #mm, #ss, #di {
+		display: inline;
+	}
+	#clockDisplay {
+		position: absolute;
+		height: 100px;
+		width: 500px;
+		top: 30%;
+		left: 30%;
+		border-radius: 30px;
+	}
+	#setTime {
+		background-color: rgba(50,50,50,.75);
+		position: absolute;
+		height: 25px;
+		width: 400px;
+		top: 48%;
+		left: 32%;
+		padding: 1%;
+		text-align: center;
+		border-radius: 20px;
+	}
+	input[type="text"] {
+		width: 100px;
+	}
+	input[type="button"] {
+		font-family: "Century Gothic", sans-serif;
+		background-color: rgba(0,0,0,.50);
+		color: white;
+		width: 120px;
+		height: 50px;
+		border-radius: 20px;
+		font-size: 16pt;
+		padding: 1%;
+	}
+	td {
+		line-height: 35px;
+	}
+	input[type="checkbox"] {
+		display: inline;
+	}
+	p {
+		margin: 0 auto;
+	}
+	.clocky {
+		width: 75px;
+		height: 50px;
+		border: solid red;
+		display: inline;
+	}
+	</style>
+	<script type="text/javascript">
+var musicsrc="sorry.mp3"
+
+	now = new Date();
+	hour = now.getHours();
+	min = now.getMinutes();
+	sec = now.getSeconds();
+
+function myTime() {
+if (min<=9) {
+	min="0"+min;
+ }
+if (sec<=9) {
+	sec="0"+sec;
+ }
+if (hour>12) {
+	hour=hour-12;
+	add="pm";
+ }
+else {
+	hour=hour;
+	add="am";
+ }
+if (hour==12) {
+	add="pm";
+ }
+if (hour==00) {
+	hour="12";
+ }
+
+ document.getElementById("hours") = hour;
+  document.minutes.clock.value = min;
+  document.seconds.clock.value = sec;
+  document.ampm.clock.value= add;
+ setTimeout("myTime()", 1000);
+
+}
+
+playit=false
+function playmusic(){
+musicwin=window.open("","","width=100,height=100")
+if (navigator.appName=="Microsoft Internet Explorer")
+musicwin.document.write('<bgsound src='+'"'+musicsrc+'"'+' loop="infinite">')
+else
+musicwin.document.write('<embed src=\"'+musicsrc+'\" hidden="true" border="0" width="20" height="20" autostart="true" loop="true">')
+musicwin.document.close()
+}
+
+function soundcheck(cbox){
+playit=cbox.checked
+}
+
+function alarm() {
+    note = document.arlm.message.value;
+    if (note == '') {note = 'ALARM!!';}
+
+    hrs = document.arlm.hr.value;
+    min = document.arlm.mts.value;
+    apm = document.arlm.am_pm.value;
+
+ if ((document.hours.clock.value == hrs) &&
+    (document.minutes.clock.value == min) &&
+    (document.ampm.clock.value == apm)) {
+     if (playit)
+     playmusic()
+     else
+     alert(note);
+     return false}
+
+ if (hrs == '') {alert('The Hour field is empty'); return false}
+ if (min == '') {alert('The Minute field is empty'); return false}
+ if (apm == '') {alert('The am/pm field is empty'); return false}
+
+ if (hrs.length == 1) {document.arlm.hr.value = '0' + hrs}
+ if (min.length == 1) {document.arlm.mts.value = '0' + min}
+ if (hrs.length > 2) {alert('The Hour is wrongly typed.'); return false}
+ if (min.length > 2) {alert('The Minute is wrongly typed.'); return false}
+ if (apm != 'am' && apm != 'pm' ) {alert('The am/pm is wrongly typed.'); return false}
+
+ setTimeout("alarm()", 1000);}
+/*
+		function renderTime() {
+			var currentTime = new Date();
+			var diem = "AM";
+			var h = currentTime.getHours();
+			var m = currentTime.getMinutes();
+			var s = currentTime.getSeconds();
+
+			if (h == 0) {
+				h = 12;
+			} 
+			else if (h > 12) {
+				h = h - 12;
+				diem = "PM";
+			}
+			if (h < 10) {
+				h = "0" + h;
+			}
+			if (m < 10) {
+				m = "0" + m;
+			}
+			if (s < 10) {
+				s = "0" + s;
+
+			}
+			var myClock = document.getElementById('clockDisplay');
+			myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+			myClock.innerText = h + ":" + m + ":" + s + " " + diem;			
+			setTimeout('renderTime()',1000);
+
+		};
+		renderTime();*/
+</script>
+
 </head>
 <body>
+
+<!--<div class="clockStyle" id="clockDisplay"></div>-->
+<form>
+     <table id="allTime">
+	    <tr>
+	      <td colspan="4"><b>Current Time</b></td>
+        </tr>
+
+	    <tr>
+	      <td>
+	        <p><input type="text" id="hours"/></p>
+	      </td>
+
+	      <td>
+	        <p><input type="text" id="minutes"/></p>
+	      </td>
+
+	      <td>
+	        <p><input type="text" id="seconds"/></p>
+	      </td>
+
+	      <td>
+	        <p><input type="text" id="ampm"/></p>
+	      </td>
+	    </tr>
+	 </table>
+
+
+     <table>
+        <tr>
+	      <td colspan="3">
+
+                <b>Alarm Time</b>
+          </td>
+        </tr>  
+        <tr>
+	      <td>Hour</td>
+	      <td>Minute</td>
+	      <td>AM/PM</td>
+        </tr>
+
+	    <tr>
+	  	  <td><input type="text" id="hr" placeholder="HH" /></td>
+	      <td><input type="text" size="2" id="mts" placeholder="SS"/></td>
+	      <td><input type="text" size="2" id="am_pm" onFocus="select()" placeholder="AM" /></td>
+	    </tr>
+
+        <tr>
+	      <td colspan="3">Message</td>
+        </tr>
+
+	    <tr>
+          <td colspan="3">
+          <input type="text" size="15" placeholder="Wake Up!" id="message"/>
+          <br>
+          <input type="checkbox" name="C1" value="ON" onClick="soundcheck(this)"> 
+          Play music?
+	      </td>
+	    </tr>
+
+        <tr>
+	      <td colspan="3">
+	      <input type="button" value="Set Alarm" onClick="alarm()"/>
+	      </td>
+	    </tr>
+
+	    <tr>
+	      <td colspan="3">
+	      <input type="button" size="2" value="Reset" onClick="reset()"/>
+	      </td>
+        </tr>
+	 </table>
+	 </form>
 
 </body>
 </html>

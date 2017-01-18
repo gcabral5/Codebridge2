@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pan's Labyrinth</title>
+<link href="https://fonts.googleapis.com/css?family=Almendra+Display|Griffy" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<header></header>
+
+<body>
+
+<div id="nav1">
+<img id="lab" src="images/lab2.gif">
+<div id="syn">
+<h2>Synopsis</h2>
+<p><span class="letter">S</span>et in Spain during World War II, Ofelia is a young girl with a passion for fairy tales. When her mother remarries the sadistic Captain Vidal, they move to the countryside. Ofelia creates an imaginary world of her own to escape the cruel and harsh realities of the world. When she encounters a faun, she must complete three tasks in order to obtain immortality according to the legend of a princess.</p>
+</div>
+</div>
+
+<div id="nav2">
+<button id="lab2" onclick="showDiv()"></button>
+<div id="clip">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eLpPDAQ0Z3s" frameborder="0" allowfullscreen autoplay></iframe>	
+</div>
+</div>
+
+<img id="bord" src="images/border.png">
+
+<div id="allimg">
+<img class="slide" src="images/pan2.jpg">
+<img class="slide" src="images/arrive.jpg">
+<img class="slide" src="images/ofestat.png">
+<img class="slide" src="images/mother1.jpg">
+<img class="slide" src="images/capvidal.jpg">
+<img class="slide" src="images/maid.jpg">
+<img class="slide" src="images/oferead.jpg">
+<img class="slide" src="images/fairy.gif">
+<img class="slide" src="images/faun2.gif">
+<img class="slide" src="images/faunofe.jpg">
+<img class="slide" src="images/mandrake.jpg">
+<img class="slide" src="images/mons1.gif">
+<img class="slide" src="images/ofegold.jpg">
+</div>
+
+<div id="scroll">
+<button class="button" id="back-button" onclick="plusDivs(-1)">&#10094;</button>
+<button class="button" id="fwd-button" onclick="plusDivs(+1)">&#10095;</button>
+</div>
+
+
+<script type="text/javascript">
+	
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+	showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+	var i;
+	var x = document.getElementsByClassName("slide");
+	if(n > x.length) {slideIndex = 1}
+	if(n < 1) {slideIndex = x.length}
+	for(i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+	x[slideIndex-1].style.display = "block";
+	}
+
+function showDiv() {
+	document.getElementByID("clip").style.display = "block";
+
+}
+
+</script>
+</body>
+<div id="fairy"><img src="images/glow.gif"></div><div id="fairy2"><img src="images/glow.gif"></div>
+<footer>
+	<p><span class="letter">P</span>AN'S <span class="letter">L</span>ABYRINTH</p>
+	<p class="tiny">A FILM BY GUILLERMO DEL TORO</p>
+</footer>
+</html>

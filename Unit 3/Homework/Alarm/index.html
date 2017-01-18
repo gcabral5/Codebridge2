@@ -70,16 +70,16 @@
 		display: inline;
 	}
 	</style>
-<script language="javascript">
-//Enter path to mid file to play
+	<script type="text/javascript">
+	
 var musicsrc="sorry.mp3"
 
-function sivamtime() {
-	now=new Date();
-	hour=now.getHours();
-	min=now.getMinutes();
-	sec=now.getSeconds();
+	now = new Date();
+	hour = now.getHours();
+	min = now.getMinutes();
+	sec = now.getSeconds();
 
+function myTime() {
 if (min<=9) {
 	min="0"+min;
  }
@@ -101,11 +101,11 @@ if (hour==00) {
 	hour="12";
  }
 
-  document.hours.clock.value = (hour<=9) ? "0"+hour : hour;
+ document.hours.clock.value = hour;
   document.minutes.clock.value = min;
   document.seconds.clock.value = sec;
-  document.ampm.clock.value= add;
- setTimeout("sivamtime()", 1000);
+  document.ampm.clock.value = add;
+ setTimeout("myTime()", 1000);
 
 }
 
@@ -146,99 +146,119 @@ function alarm() {
 
  if (hrs.length == 1) {document.arlm.hr.value = '0' + hrs}
  if (min.length == 1) {document.arlm.mts.value = '0' + min}
- if (hrs.length > 2) {alert('The Hour is wrongly typed.'); return false}
- if (min.length > 2) {alert('The Minute is wrongly typed.'); return false}
- if (apm != 'am' && apm != 'pm' ) {alert('The am/pm is wrongly typed.'); return false}
+ if (hrs.length > 2) {alert('The Hour is invalid.'); return false}
+ if (min.length > 2) {alert('The Minute is invalid.'); return false}
+ if (apm != 'am' && apm != 'pm' ) {alert('The am/pm is invalid.'); return false}
 
  setTimeout("alarm()", 1000);}
 
+	/* This is the part that I'm struggling with, getting the current time to show automatically...
+
+		function renderTime() {
+			var currentTime = new Date();
+			var diem = "AM";
+			var h = currentTime.getHours();
+			var m = currentTime.getMinutes();
+			var s = currentTime.getSeconds();
+
+			if (h == 0) {
+				h = 12;
+			} 
+			else if (h > 12) {
+				h = h - 12;
+				diem = "PM";
+			}
+			if (h < 10) {
+				h = "0" + h;
+			}
+			if (m < 10) {
+				m = "0" + m;
+			}
+			if (s < 10) {
+				s = "0" + s;
+
+			}
+			var myClock = document.getElementById("clockDisplay");
+			myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+			myClock.innerText = h + ":" + m + ":" + s + " " + diem;			
+			setTimeout('renderTime()',1000);
+		};
+		renderTime();*/
 </script>
 
 </head>
-<body onLoad="sivamtime()">
-         <table>
-         <h2>Minimalist Alarm Clock</h2>
+<body onLoad="myTime()">
+
+<div class="clockStyle" id="clockDisplay"></div>
+<form>
+     <table id="allTime">
 	    <tr>
-	      <td colspan="4">
-                  Current Time
-              </td>
-            </tr>
+	      <td colspan="4"><b>Current Time</b></td>
+        </tr>
+
 	    <tr>
 	      <td>
-		 <form name="hours">
-	         <p><input type="text" name="clock"></p>
-	         </form>
+	        <p><input type="text" id="hours"/></p>
 	      </td>
+
 	      <td>
-		 <form name="minutes">
-	         <p><input type="text" name="clock" /></p>
-	         </form>
+	        <p><input type="text" id="minutes"/></p>
 	      </td>
+
 	      <td>
-		 <form name="seconds">
-	         <p><input type="text" name="clock" /></p>
-	         </form>
+	        <p><input type="text" id="seconds"/></p>
 	      </td>
+
 	      <td>
-		 <form name="ampm">
-	         <p><input type="text" name="clock" /></p>
-	         </form>
+	        <p><input type="text" id="ampm"/></p>
 	      </td>
 	    </tr>
 	 </table>
 
 
-         <table>
-            <tr>
+     <table>
+        <tr>
 	      <td colspan="3">
-	 <form name="arlm">
-                   Alarm Time
-              </td>
-            </tr>  
-            <tr>
-	      <td>
-                    Hour 
-              </td>
-	      <td>
-                     Minute
-              </td>
-	      <td>
-                    am/pm
-              </td>
-            </tr>
-	    <tr>
-	      <td>
-	         <input type="text" name="hr" onFocus="select()" />
 
-	      </td>
-	      <td>
-	           <input type="text" name="mts" onFocus="select()" />
-	      </td>
-	      <td>
-	          <input type="text" value="am" name="am_pm" onFocus="select()" />
-	      </td>
-	    </tr>
-            <tr>
-	      <td colspan="3">
-                    Message
-              </td>
-            </tr>
+                <b>Alarm Time</b>
+          </td>
+        </tr>  
+        <tr>
+	      <td>Hour</td>
+	      <td>Minute</td>
+	      <td>AM/PM</td>
+        </tr>
+
 	    <tr>
-              <td colspan="3">
-                 <input type="text" value="Wake Up!" name="message" /><br>
-<input type="checkbox" name="C1" value="ON" onClick="soundcheck(this)"> Play music?
+	  	  <td><input type="text" id="hr" placeholder="HH" /></td>
+	      <td><input type="text" size="2" id="mts" placeholder="SS"/></td>
+	      <td><input type="text" size="2" id="am_pm" onFocus="select()" placeholder="AM" /></td>
+	    </tr>
+
+        <tr>
+	      <td colspan="3">Message</td>
+        </tr>
+
+	    <tr>
+          <td colspan="3">
+          <input type="text" size="15" placeholder="Wake Up!" id="message"/>
+          <br>
+          <input type="checkbox" name="C1" value="ON" onClick="soundcheck(this)"> 
+          Play music?
 	      </td>
 	    </tr>
-            <tr>
+
+        <tr>
 	      <td colspan="3">
-	         <input type="button" value="Set Alarm" onClick="alarm()" />
+	      <input type="button" value="Set Alarm" onClick="alarm()"/>
 	      </td>
 	    </tr>
+
 	    <tr>
 	      <td colspan="3">
-	         <input type="button" value="Reset" onClick="reset()" />
+	      <input type="button" size="2" value="Reset" onClick="reset()"/>
 	      </td>
-            </tr>
+        </tr>
 	 </table>
 	 </form>
 

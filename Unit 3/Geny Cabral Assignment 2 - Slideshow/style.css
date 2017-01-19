@@ -127,6 +127,23 @@ p {
 #nav2 {
 	box-shadow: 25px; 
 }
+#nav2:hover #clip{
+	position: absolute;
+	display: inline;
+	width: 700px;
+	height: 600px;
+	top: 5%;
+	left: 22%;
+	background-color: rgba(0,0,0,.85);
+	color: white;
+	font-size: 16pt;
+	z-index: 150;
+	padding: 15px;
+}
+
+#clip {
+	display: none;
+}
 
 #homeaudio {
 	display: none;

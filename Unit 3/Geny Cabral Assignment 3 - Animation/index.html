@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC|Poiret+One" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background: url("images/desk.jpg") no-repeat;
+			background-size: cover;
+			margin: 0%;
+			font-family: 'Poiret One', cursive;
+		}
+		header {
+			background-color: rgba(125,125,125,.5);
+			color: rgb(255,255,255);
+			height:100%;
+			margin: 0%;
+			position: absolute;
+			padding: 10px;
+			line-height: 20px;
+			z-index: 999;
+			width: 17%;
+		}
+		h1 {
+			font-size: 20pt;
+			background-color: rgba(8,14,48,.50);
+			height: 40px;
+			margin-bottom: 6%;
+		}
+		.letter {
+			font-size: 50pt;
+		}
+		#tagline {
+			margin: 0%;
+			font-size: 12pt;
+			color: white;
+			padding: 0px 5px;
+			letter-spacing: 1px;	
+		}
+		#coll1 {
+			position: absolute;
+			top: 15%;
+			transform: rotate(340deg);
+		}
+		#coll2 {
+			position: absolute;
+			top: 50%;
+			left: 70%;
+			height: 250px;
+			width: 350px;
+			transform: rotate(25deg);
+		}
+		#cors {
+			top: 60%;
+			right: 75%;
+			height: 50px;
+			width: 100px;
+			position: absolute;
+			z-index: 2;
+			transform: rotate(345deg);
+		}
+		.posts {
+			height: 100%;
+			width: 325px;
+			position: absolute;
+			background-color: rgba(0,0,0,.85);
+			color: white;
+			font-size: 16pt;
+			text-align: center;
+		}
+		h2 {
+			font-size: 25pt;
+			background-color: rgba(8,14,48,.50);
+			height: 40px;
+			padding-left: 5px;
+		}
+		p {
+			padding: 10px;
+		}
+		li {
+			text-decoration: none;
+		}
+		.menuit {
+			border: none;
+			font-family: 'Poiret One', cursive;
+			color: white;
+			width: 175px;
+			font-size: 22pt;
+			background-color: rgba(8,14,48,.50);
+			line-height: 30px;
+			text-align: right;
+			margin-top: 20%;
+			padding: 2px;
+		}
+		.menuit:hover {
+			background-color: rgba(255,255,255,.50);
+			color: rgb(8,14,48);
+		}
+		#menu {
+			position: absolute;
+			top: 20%;
+			left: 25%;
+		}
+		#land {
+			margin-left: 36%;
+			margin-top: 10%;
+		}
+		.hbutton {
+			float: left;
+			width: 100px;
+			border: none;
+			background-color: rgba(255,255,255,.5);
+			margin-top: 10%;
+			font-size: 12pt;
+			font-family: 'Poiret One', cursive;
+		}
+		#about {
+			top: -100%;
+			left: 19%;
+			z-index: 2;
+		}
+		#latest {
+			top: -100%;
+			left: 45%;
+			z-index: 3;
+		}
+		#subscribe {
+			top: -100%;
+			left: 71%;
+			z-index: 4;
+		}
+		a {
+			text-decoration: none;
+			font-size: 12pt;
+			color: navy;
+		}
+	</style>
+</head>
+<header>
+	<h1><span class="letter">F</span>RIDA <span class="letter">A</span>NGELO</h1>
+	<b><p id="tagline">promises to keep<br> &amp; miles to go before I sleep</p></b>
+	<hr>
+	<div id="menu">
+	<br>
+		<button class="menuit" id="meet" onclick="move1()">Meet Frida</button>
+		<button class="menuit" id="late" onclick="move2()">Latest Post</button>
+		<button class="menuit" id="subs" onclick="move3()">Subscribe</button>
+		<button class="menuit" id="home"><a href="index.html">Hide Items</a></button>
+	</div>
+</header>
+
+<body>
+	<img id="coll1" src="images/collage.png">
+	<img id="coll2" src="images/collage2.png">
+	<img id="land" src="images/landing.png">
+
+	<div id="container">
+		<div class="posts" id="about">
+		<h2>Meet Frida</h2>
+		<img id="frida1" src="images/frida1.png">
+		<p>Like my namesake, I am many things to many people; Artist, traveler, writer, lover, sister, mother and muse. My passions include living my life to the fullest and meeting other disrupters, vagabonds and curious minds. I hail from Oakland, CA but spend most of my time on the road.</p>
+	</div>
+
+
+	<div class="posts" id="latest">
+		<h2>Amalfi Coast</h2>
+		<img src="images/amalfi.jpg">
+		<p>It was the stuff of dreams. George and I had the simply most decadent vacation of our lives. Check the view from our balcony. We got moneeeeeeyyyyyyy!<br>
+		Fun fact:
+		The town of Amalfi was the capital of the maritime republic known as the Duchy of Amalfi, an important trading power in the Mediterranean between 839 and around 1200.</p>
+	</div>
+
+
+
+	<div class="posts" id="subscribe">
+		<h2>Subscribe</h2>
+		<p>Subscribe to my updates. I pinky-promise not to spam your inbox every day.</p>
+		<form>
+			<input type="text" name="" size="40" placeholder="Your Name"><br>
+			<br>
+			<input type="text" name="" size="40" placeholder="Your Email Address"><br>
+			<br>
+			<input type="submit" name="">
+			<br>
+			<br>
+			<br>
+		</form>
+	</div>
+</div>
+
+	<script type="text/javascript">
+	function move1() {
+		var abo = document.getElementById("about");
+		var pos1 = 0;
+		var id1 = setInterval(frame1, 50);
+
+		function frame1() {
+			if (pos1 == 10) {
+				clearInterval(id1);
+			} else {
+				pos1 ++;
+				abo.style.top = pos1 + 'px';
+			}
+			}
+		}
+
+	function move2() {
+		var lat = document.getElementById("latest");
+		var pos1 = 0;
+		var id1 = setInterval(frame1, 50);
+
+	function frame1() {
+		if (pos1 == 10) {
+			clearInterval(id1);
+		} else {
+			pos1 ++;
+			lat.style.top = pos1 + 'px';
+		}
+		}
+	}
+
+	function move3() {
+		var sub = document.getElementById("subscribe");
+		var pos1 = 0;
+		var id1 = setInterval(frame1, 50);
+
+	function frame1() {
+		if (pos1 == 10) {
+			clearInterval(id1);
+		} else {
+			pos1 ++;
+			sub.style.top = pos1 + 'px';
+		}
+		}
+	}
+
+	</script>
+
+
+</body>
+</html>

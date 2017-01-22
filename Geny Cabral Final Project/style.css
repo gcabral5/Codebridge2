@@ -1,0 +1,236 @@
+/*General Style*/
+body {
+	margin: 0%;
+	background: url("images/brickwallsm.jpg") no-repeat;
+	background-size: cover;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+}
+header {
+
+}
+#palm1 {
+	float: left;
+}
+#palm2 {
+	float: right;
+}
+#logo, #logo2 {
+	font-family: 'Rock Salt', cursive;
+	position: absolute;
+	height: 200px;
+	width: 500px;
+	margin: 0px;
+	left: 18%;
+	color: white;
+	font-size: 35pt;
+	transform: rotate(345deg);
+	letter-spacing: 20px;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+#logo2 {
+	top: 4%;
+	left: 40%;
+}
+#letter {
+	font-size: 70pt;
+}
+a	{
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: limegreen;
+	font-size: 18pt;
+}
+ul {
+	list-style: none;
+}
+li {
+	font-size: 14pt;
+	padding-right: 7px;
+}
+li:hover {
+	background-color: rgba(207,0,57,.8);
+}
+#hh a {
+	font-size: 12pt;
+}
+#hh:hover a {
+	font-size: 16pt;
+}
+#nav {
+	position: absolute;
+	top: 5%;
+	left: 1%;
+}
+
+#navbutton {
+	background: url("images/recordsm.png");
+	background-size: cover;
+	height: 125px;
+	width: 125px;
+	border: none;
+}
+#navcontent {
+	display: none;
+}
+
+#nav:hover #navcontent{
+	display: block;
+	background-color: rgba(0,0,0,.5);
+	height: 400px;
+	width: 200px;
+	line-height: 50px;
+	text-align: right;
+}
+footer {
+	position: fixed;
+	top: 93%;
+	height: 50px;
+	width: 100%;
+	background-color: rgba(0,0,0,.75);
+	font-size: 10pt;
+	color: white;
+	padding-top: 5px;
+}
+footer img{
+	height: 40px;
+	width: 40px;
+}
+#footicon {
+	float: right;
+}
+
+/* About Style*/
+
+#about {
+	position: absolute;
+	top: 10%;
+	left: 25%;
+}
+#abouttext {
+	background-color: rgba(0,0,0,.9);
+	color: white;
+	height: 280px;
+	width: 660px;
+	padding: 15px;
+	font-size: 14pt;
+}
+
+
+/* Events Style*/
+
+table {
+	position: absolute;
+	top: 1%;
+	left: 18%;
+	height: 375px;
+	width: 975px;
+	background-color: rgba(0,0,0,.75);
+	color: rgb(207,0,106);
+	border: solid rgb(207,0,106) 1px;
+	margin: 0px;
+}
+td {
+	border: solid rgb(207,0,106) 1px;
+	height: 50px;
+	width: 100px;
+}
+#tablehead {
+	padding: 0px;
+	height: 20px;
+	font-size: 18pt;
+	padding: 5px;
+	color: limegreen;
+	letter-spacing: 10px;
+	font-style: bold;
+}
+.day {
+	border: solid limegreen .5px;
+	width: 30px;
+	float: right;
+	display: block;
+	margin-bottom: 73%;
+}
+.event {
+	font-size: 10pt;
+	height: 75px;
+	width: 75px;
+	display: block;
+	padding-top: 15px;
+	padding-left: 5px;
+	line-height: 20px;
+}
+
+
+/* House in Haiti page style*/
+
+#househaiti {
+	position: absolute;
+	top: 5%;
+	left: 25%;
+	background-color: rgba(0,0,0,.9);
+	color: white;
+	font-size: 16pt;
+	height: 580px;
+	width: 660px;
+	padding: 15px;
+	line-height: 30px;
+}
+
+/* OYASOUND page style*/
+
+#oyatext {
+	position: absolute;
+	top: 5%;
+	left: 18%;
+	background-color: rgba(0,0,0,.9);
+	color: white;
+	font-size: 16pt;
+	height: 160px;
+	width: 900px;
+	padding: 5px;
+	line-height: 25px;
+}
+
+
+/* Gear page style*/
+
+
+
+/* Contact page style*/
+
+#contact {
+	font-family: 'Josefin Sans', sans-serif;
+	position: absolute;
+	top: 5%;
+	left: 25%;
+	background-color: rgba(0,0,0,.9);
+	color: white;
+	font-size: 16pt;
+	height: 580px;
+	width: 660px;
+	padding: 15px;
+	line-height: 50px;
+	text-align: center;
+}
+input[type="text"] {
+	font-family: 'Josefin Sans', sans-serif;
+	height: 30px;
+	font-size: 20pt;
+}
+input[type="textarea"] {
+	font-family: 'Josefin Sans', sans-serif;
+	height: 200px;
+	width: 400px;
+	display: block;
+	margin: 0 auto;
+	font-size: 18pt;
+}
+input[type="submit"] {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20pt;
+	height: 100px;
+	width: 100px;
+}

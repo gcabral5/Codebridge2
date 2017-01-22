@@ -35,6 +35,13 @@ header {
 #letter {
 	font-size: 70pt;
 }
+#main {
+	position: absolute;
+	top: 40%;
+	left: 30%;
+	height: 300px;
+	width: 400px;
+}
 a	{
 	text-decoration: none;
 	color: white;

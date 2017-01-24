@@ -1,4 +1,4 @@
-/*General Style*/
+/*--General--*/
 body {
 	margin: 0%;
 	background: url("images/brickwallsm.jpg") no-repeat;
@@ -6,9 +6,8 @@ body {
 	text-align: center;
 	font-family: 'Josefin Sans', sans-serif;
 }
-header {
 
-}
+/*--General/Palm, Main Img and Logo--*/
 #palm1 {
 	float: left;
 }
@@ -41,16 +40,22 @@ header {
 }
 #main {
 	position: absolute;
-	top: 33%;
-	left: 33%;
+	top: 32%;
+	left: 26%;
+	z-index: -100;
 }
+
+/*--General/Nav Menu--*/
 a	{
 	text-decoration: none;
 	color: white;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
 }
 a:hover {
 	color: limegreen;
 	font-size: 18pt;
+	text-shadow: none;
+
 }
 ul {
 	list-style: none;
@@ -70,15 +75,15 @@ li:hover {
 }
 #nav {
 	position: absolute;
-	top: 5%;
+	top: 3%;
 	left: 1%;
 }
 
 #navbutton {
 	background: url("images/recordsm.png");
 	background-size: cover;
-	height: 125px;
-	width: 125px;
+	height: 175px;
+	width: 175px;
 	border: none;
 }
 #navcontent {
@@ -88,20 +93,95 @@ li:hover {
 #nav:hover #navcontent{
 	display: block;
 	background-color: rgba(0,0,0,.5);
-	height: 400px;
+	height: 300px;
 	width: 200px;
 	line-height: 50px;
 	text-align: right;
+	z-index: 100;
 }
+#tri {
+	position: fixed;
+	top: 22%;
+	left: 10%;
+	border-radius: 50%;
+	height: 35px;
+	width: 35px;
+	padding: 0px;
+}
+
+/*--spinning record animation--*/
+.spiralContainer {
+  border-radius: 50%;
+  width:200px;
+  height:200px;
+  overflow:hidden;
+  margin:20px;
+  
+  -webkit-animation: spin 3s linear 0s infinite reverse;
+  -moz-animation: spin 3s linear 0s infinite reverse;  
+  -ms-animation: spin 3s linear 0s infinite reverse;
+  -o-animation: spin 3s linear 0s infinite reverse;
+  animation: spin 3s linear 0s infinite reverse;
+  
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;  
+  animation-play-state: paused;
+}
+.spiral {
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  background-image: url("images/vinylblue.png");
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  
+  
+  -webkit-animation: spin 6s linear 0s infinite normal;
+  -moz-animation: spin 6s linear 0s infinite normal;
+  -ms-animation: spin 6s linear 0s infinite normal;
+  -o-animation: spin 6s linear 0s infinite normal;
+  animation: spin 6s linear 0s infinite normal;
+}
+.spiralContainer:hover {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+@keyframes spin {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+  0% {-webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+@-ms-keyframes spin {
+  0% {-ms-transform: rotate(360deg); }
+  100% { -ms-transform: rotate(0deg); }
+}
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(360deg); }
+  100% { -moz-transform: rotate(0deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(360deg); }
+  100% { -o-transform: rotate(0deg); }
+}
+/*--General/Footer--*/
 footer {
 	position: fixed;
 	top: 93%;
-	height: 50px;
+	height: 100px;
 	width: 100%;
 	background-color: rgba(0,0,0,.75);
 	font-size: 10pt;
 	color: white;
 	padding-top: 5px;
+	z-index: 10;
 }
 footer img{
 	height: 40px;
@@ -110,33 +190,127 @@ footer img{
 #footicon {
 	float: right;
 }
+#contp {
+	position: absolute;
+	font-size: 20pt;
+	left: 48%;
+	padding-top: 10px;
+
+}
+/*--General/Speakerbox Img--*/
+.box {
+	position: absolute;
+	z-index: -20;
+}
+#spbl {
+	left: 3%;
+	top: 40%;
+}
+#spbr {
+	right: 1%;
+	top: 40%;
+	z-index: -5;
+}
+#spkl {
+	left: 7%;
+	top: 67%;
+}
+#spkr {
+	right: 5%;
+	top: 67%;
+	z-index: -4;
+}
+
+/*--General/Soundcloud Modal--*/
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.75);
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 400px;
+	position: absolute;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient (#fff, #999);
+	background: -webkit-linear-gradient (#fff, #999);
+	background: -o-linear-gradient (#fff, #999);		
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;			
+}
+.close:hover {
+	background: #00d9ff;
+}
+.boxy {
+	left: 34%;
+}
 
 
-/* About Style*/
+/*---About Page---*/
 
 #about {
 	position: absolute;
-	top: 10%;
+	top: 52%;
 	left: 25%;
 }
 #abouttext {
 	background-color: rgba(0,0,0,.9);
 	color: white;
-	height: 250px;
+	height: 200px;
 	width: 660px;
 	padding: 15px;
-	font-size: 14pt;
+	font-size: 17pt;
+	line-height: 30px;
+	border: solid white 2px;
 }
-
+.mySlides {
+	position: absolute;
+	top: 13%;
+	left: 42%;
+	z-index: 999;
+	border-radius: 50%;
+	border: solid white 2px;
+}
 
 /* Events Style*/
 
 table {
 	position: absolute;
-	top: 1%;
-	left: 18%;
-	height: 375px;
-	width: 975px;
+	top: 10%;
+	left: 22%;
+	height: 547px;
+	width: 740px;
 	background-color: rgba(0,0,0,.75);
 	color: rgb(207,0,106);
 	border: solid rgb(207,0,106) 1px;
@@ -164,7 +338,7 @@ td {
 	margin-bottom: 73%;
 }
 .event {
-	font-size: 10pt;
+	font-size: 11pt;
 	height: 75px;
 	width: 75px;
 	display: block;
@@ -172,7 +346,106 @@ td {
 	padding-left: 5px;
 	line-height: 20px;
 }
+.button {
+	background: rgba(0,0,0,0);
+	border: none;
+	font-size: 14pt;
+	color: limegreen;
+}
+.dw {
+	height: 10px;
+	font-size: 10pt;
+}
+/* Images*/
 
+.vinyl {
+	border: none;
+	border-radius: 50%;
+	position: absolute;
+	font-size: 28pt;
+	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+}
+#libations {
+	background: url("images/vinylpink.png") no-repeat;
+	background-size: cover;
+	top: 45%;
+	left: 25%;
+	color: purple;
+	height: 175px;
+	width: 179px;
+}
+#libations:hover {
+	height: 275px;
+	width: 279px;
+	z-index: 5;
+	font-size: 30pt;
+}
+#pro1 {
+	background: url("images/vinylblue.png") no-repeat;
+	background-size: cover;
+	top: 53%;
+	left: 38%;
+	color: fuchsia;
+	height: 120px;
+	width: 128px;
+}
+#pro1:hover {
+	height: 220px;
+	width: 229px;
+	z-index: 5;
+	font-size: 30pt;
+}
+#inter {
+	background: url("images/vinylfoam.png") no-repeat;
+	background-size: cover;
+	top: 66%;
+	left: 29%;
+	color: white;
+	height: 154px;
+	width: 156px;
+}
+#inter:hover {
+	height: 254px;
+	width: 256px;
+	z-index: 999;
+	font-size: 30pt;
+}
+#pro2 {
+	background: url("images/vinylgold.png") no-repeat;
+	background-size: cover;
+	top: 50%;
+	left: 55%;
+	color: blue;
+	height: 127px;
+	width: 131px;
+	z-index: -998;	
+}
+#pro2:hover {
+	height: 227px;
+	width: 235px;
+	z-index: 999;
+	font-size: 30pt;
+}
+#nanaataa {
+	background: url("images/vinylwhite.png") no-repeat;
+	background-size: contain;
+	top: 34%;
+	left: 62%;
+	color: white;
+	height: 199px;
+	width: 200px;
+	z-index: -999;
+}
+#nanaataa:hover {
+	height: 305px;
+	width: 300px;
+	z-index: 999;
+	font-size: 30pt;
+}
+.content {
+	position: absolute;
+	display: none;
+}
 
 /* House in Haiti page style*/
 
@@ -187,27 +460,13 @@ td {
 	width: 660px;
 	padding: 15px;
 	line-height: 30px;
+	border: solid white 2px;
+	overflow: scroll;
 }
-
-/* OYASOUND page style*/
-
-#oyatext {
-	position: absolute;
-	top: 5%;
-	left: 18%;
-	background-color: rgba(0,0,0,.9);
-	color: white;
-	font-size: 16pt;
-	height: 160px;
-	width: 900px;
-	padding: 5px;
-	line-height: 25px;
+#hhtext {
+	font-size: 20pt;
+	padding: 5%;
 }
-
-
-/* Gear page style*/
-
-
 
 /* Contact page style*/
 
@@ -224,6 +483,7 @@ td {
 	padding: 15px;
 	line-height: 50px;
 	text-align: center;
+	border: solid white 2px;
 }
 input[type="text"] {
 	font-family: 'Josefin Sans', sans-serif;
@@ -244,3 +504,32 @@ input[type="submit"] {
 	height: 100px;
 	width: 100px;
 }
+
+/*--Gear--*/
+.gearimg {
+	height: 225px;
+	width: 225px;
+}
+.geardes {
+	background-color: rgba(0,0,0,.5);
+}
+#geartext {
+	font-size: 30pt;
+	padding-top: 15px;
+}
+#shopc {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 90%;
+}
+#merchshop {
+	position: absolute;
+	left: 85%;
+	top: 15%;
+	background: url("images/shop.png");
+	background-size: cover;
+	height: 75px;
+	width: 75px;
+}
+

@@ -10,96 +10,310 @@
 	<img id="palm2" src="images/palm2.png">
 </header>
 <body>
+
+<!--Logo, main image and speakerboxes-->
 	<p id="logo"><span id="letter">S</span><sup>abine</sup></p>
 	<p id="logo2"><span id="letter">B</span><sup>laizin</sup></p>
 
+	<img class="box" id="spbl" src="images/spkbox.png">
+	<img class="box" id="spkl" src="images/spk2.gif">
+	<img class="box" id="spbr" src="images/spkbox.png">
+	<img class="box" id="spkr" src="images/spk2.gif">
+
+	<img id="main" src="images/sbmain2.png">
+
+
 <!--Navigation Menu on all pages-->
-<div id="nav">
-<input id="navbutton" type="submit" value="">
-<div id="navcontent">
-	<ul>
-		<li><a href="index.html" target=_blank>HOME</a></li>
-		<li><a href="about.html" target=_blank>ABOUT</a></li>
-		<li><a href="events.html" target=_blank>EVENTS</a></li>
-		<li><a href="images.html" target=_blank>GALLERY</a></li>
-		<li id="hh"><a href="house.html" target=_blank>HAITI &amp; HOUSE</a></li>
-		<li><a href="osound.html" target=_blank>OYASOUND</a></li>
-		<li><a href="gear.html" target=_blank>GEAR</a></li>
-		<li><a href="contact.html" target=_blank>CONTACT</a></li>
-	</ul>
-</div>
-</div>
+	<div id="nav">
+	<div class="spiralContainer"><input class="spiral" id="navbutton" type="submit" value=""></div>
+	<img id="tri" src="images/triangle.png">
+	<div id="navcontent">
+		<ul>
+			<li><a href="index.html" target=_blank>HOME</a></li>
+			<li><a href="about.html" target=_blank>ABOUT</a></li>
+			<li><a href="events.html" target=_blank>EVENTS</a></li>
+			<li><a href="images.html" target=_blank>GALLERY</a></li>
+			<li id="hh"><a href="house.html" target=_blank>HAITI &amp; HOUSE</a></li>
+			<li><a href="gear.html" target=_blank>GEAR</a></li>
+		</ul>
+	</div>
+	</div>
+
 
 <!--Events Table-->
-
-<table>
-	<tr>
-	<td colspan="7" id="tablehead">Events - January 2017</td>
-	</tr>
-	<tr>
-		<td><div class="day">1</div></td>
-		<td><div class="day">2</div></td>
-		<td><div class="day">3</div></td>
-		<td><div class="day">4</div></td>
-		<td><div class="day">5</div></td>
-		<td><div class="day">6</div></td>
-		<td>
-			<div class="day">7</div>
-			<div class="event">Deep Afro Soul @The Five Spot Brooklyn 11pm</div>
-		</td>				
-	</tr>
-
-	<tr>
-		<td><div class="day">8</div></td>
-		<td><div class="day">9</div></td>
-		<td><div class="day">10</div></td>
-		<td><div class="day">11</div></td>
-		<td><div class="day">12</div></td>
-		<td><div class="day">13</div></td>
-		<td><div class="day">14</div></td>				
-	</tr>
-
-	<tr>
-		<td><div class="day">15</div></td>
-		<td><div class="day">16</div></td>
-		<td><div class="day">17</div></td>
-		<td><div class="day">18</div></td>
-		<td><div class="day">19</div></td>
-		<td>
-		<div class="day">20</div>
-		<div class="event">Electafrique @Maison De La Culture Dakar 10pm</div>
+	<table class="month" id="January">
+		<tr>
+		<td colspan="7" id="tablehead">
+		<button class="button" id="back-button" onclick="plusDivs(-1)">&#10094;</button>
+		Events - January 2017
+		<button class="button" id="fwd-button" onclick="plusDivs(+1)">&#10095;</button>
 		</td>
-		<td><div class="day">21</div></td>				
-	</tr>
+		</tr>
 
-	<tr>
-		<td><div class="day">22</div></td>
-		<td><div class="day">23</div></td>
-		<td><div class="day">24</div></td>
-		<td><div class="day">25</div></td>
-		<td><div class="day">26</div></td>
-		<td><div class="day">27</div></td>
-		<td>
-		<div class="day">28</div>
-		<div class="event">The People Party @The New Parish Oakland 9pm</div>
-		</td>				
-	</tr>
+		<tr>
+			<td class="dw"><div>SUN</div></td>
+			<td class="dw"><div>MON</div></td>
+			<td class="dw"><div>TUE</div></td>
+			<td class="dw"><div>WED</div></td>
+			<td class="dw"><div>THU</div></td>
+			<td class="dw"><div>FRI</div></td>
+			<td class="dw"><div>SAT</div></td>				
+		</tr>
 
-	<tr>
-		<td><div class="day">29</div></td>
-		<td><div class="day">30</div></td>
-		<td><div class="day">31</div></td>
-		<td><div class="day"></div></td>
-		<td><div class="day"></div></td>
-		<td><div class="day"></div></td>
-		<td><div class="day"></div></td>				
-	</tr>
-</table>
+		<tr>
+			<td><div class="day">1</div></td>
+			<td><div class="day">2</div></td>
+			<td><div class="day">3</div></td>
+			<td><div class="day">4</div></td>
+			<td><div class="day">5</div></td>
+			<td><div class="day">6</div></td>
+			<td>
+				<div class="day">7</div>
+				<div class="event">Deep Afro Soul @The Five Spot 11pm</div>
+			</td>				
+		</tr>
 
+		<tr>
+			<td><div class="day">8</div></td>
+			<td><div class="day">9</div></td>
+			<td><div class="day">10</div></td>
+			<td><div class="day">11</div></td>
+			<td><div class="day">12</div></td>
+			<td><div class="day">13</div></td>
+			<td><div class="day">14</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">15</div></td>
+			<td><div class="day">16</div></td>
+			<td><div class="day">17</div></td>
+			<td><div class="day">18</div></td>
+			<td><div class="day">19</div></td>
+			<td>
+			<div class="day">20</div>
+			<div class="event">Afrique @Maison Culture 10pm</div>
+			</td>
+			<td><div class="day">21</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">22</div></td>
+			<td><div class="day">23</div></td>
+			<td><div class="day">24</div></td>
+			<td><div class="day">25</div></td>
+			<td><div class="day">26</div></td>
+			<td><div class="day">27</div></td>
+			<td>
+			<div class="day">28</div>
+			<div class="event">People Party @Parish 9pm</div>
+			</td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">29</div></td>
+			<td><div class="day">30</div></td>
+			<td><div class="day">31</div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>				
+		</tr>
+	</table>
+
+	<table class="month" id="February">
+		<tr>
+		<td colspan="7" id="tablehead">
+		<button class="button" id="back-button" onclick="plusDivs(-1)">&#10094;</button>
+		Events - February 2017
+		<button class="button" id="fwd-button" onclick="plusDivs(+1)">&#10095;</button>
+		</td>
+		</tr>
+
+		<tr>
+			<td class="dw"><div>SUN</div></td>
+			<td class="dw"><div>MON</div></td>
+			<td class="dw"><div>TUE</div></td>
+			<td class="dw"><div>WED</div></td>
+			<td class="dw"><div>THU</div></td>
+			<td class="dw"><div>FRI</div></td>
+			<td class="dw"><div>SAT</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day">1</div></td>
+			<td><div class="day">2</div></td>
+			<td><div class="day">3</div></td>
+			<td><div class="day">4</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">5</div></td>
+			<td>
+			<div class="day">6</div>
+			<div class="event">Mundo @The Factory 10pm</div>
+			</td>
+			<td><div class="day">7</div></td>
+			<td><div class="day">8</div></td>
+			<td><div class="day">9</div></td>
+			<td><div class="day">10</div></td>
+			<td><div class="day">11</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">12</div></td>
+			<td><div class="day">13</div></td>
+			<td>
+			<div class="day">14</div>
+			<div class="event">Cumban @Subrosa 10pm</div>
+			</td>
+			<td><div class="day">15</div></td>
+			<td><div class="day">16</div></td>
+			<td><div class="day">17</div></td>
+			<td><div class="day">18</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">19</div></td>
+			<td><div class="day">20</div></td>
+			<td><div class="day">21</div></td>
+			<td><div class="day">22</div></td>
+			<td><div class="day">23</div></td>
+			<td><div class="day">24</div></td>
+			<td><div class="day">25</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">26</div></td>
+			<td>
+			<div class="day">27</div>
+			<div class="event">Ukwu @Casa 9pm</div>
+			</td>
+			<td><div class="day">28</div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>				
+		</tr>
+	</table>
+
+	<table class="month" id="March">
+		<tr>
+		<td colspan="7" id="tablehead">
+		<button class="button" id="back-button" onclick="plusDivs(-1)">&#10094;</button>
+		Events - March 2017
+		<button class="button" id="fwd-button" onclick="plusDivs(+1)">&#10095;</button>
+		</td>
+		</tr>
+
+		<tr>
+			<td class="dw"><div>SUN</div></td>
+			<td class="dw"><div>MON</div></td>
+			<td class="dw"><div>TUE</div></td>
+			<td class="dw"><div>WED</div></td>
+			<td class="dw"><div>THU</div></td>
+			<td class="dw"><div>FRI</div></td>
+			<td class="dw"><div>SAT</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day"></div></td>
+			<td><div class="day">1</div></td>
+			<td><div class="day">2</div></td>
+			<td><div class="day">3</div></td>
+			<td><div class="day">4</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">5</div></td>
+			<td>
+			<div class="day">6</div>
+			<div class="event">Cali @Buru 10pm</div>
+			</td>
+			<td><div class="day">7</div></td>
+			<td><div class="day">8</div></td>
+			<td><div class="day">9</div></td>
+			<td><div class="day">10</div></td>
+			<td><div class="day">11</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">12</div></td>
+			<td><div class="day">13</div></td>
+			<td><div class="day">14</div></td>
+			<td><div class="day">15</div></td>
+			<td>
+			<div class="day">16</div>
+			<div class="event">Afrique @Cohibo 9pm</div>
+			</td>
+			<td><div class="day">17</div></td>
+			<td><div class="day">18</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">19</div></td>
+			<td><div class="day">20</div></td>
+			<td><div class="day">21</div></td>
+			<td><div class="day">22</div></td>
+			<td><div class="day">23</div></td>
+			<td><div class="day">24</div></td>
+			<td><div class="day">25</div></td>				
+		</tr>
+
+		<tr>
+			<td><div class="day">26</div></td>
+			<td><div class="day">27</div></td>
+			<td><div class="day">28</div></td>
+			<td>
+			<div class="day">29</div>
+			<div class="event">Cumban @Subrosa 10pm</div>
+			</td>
+			<td><div class="day">30</div></td>
+			<td><div class="day">31</div></td>
+			<td><div class="day"></div></td>				
+		</tr>
+	</table>
+
+
+<!--JS for calendar slideshow-->
+	<script type="text/javascript">
+		
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+		showDivs(slideIndex += n);
+	}
+
+	function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("month");
+		if(n > x.length) {slideIndex = 1}
+		if(n < 1) {slideIndex = x.length}
+		for(i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		x[slideIndex-1].style.display = "block";
+		}
+	</script>
+
+
+<!--Soundcloud Modal (hidden)-->
+	<div id="openModal" class="modalDialog">
+		<div class="boxy">
+			<a href="#close" title="Close" class="close">X</a>
+			<iframe width="100%" height="300" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/606060&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+		</div>
+	</div>
 
 
 <footer>
-	<div id="footicon"><a href="https://www.facebook.com/Oyasound/" target=_blank><img src="images/fbicon.png"></a><a href="https://twitter.com/sabineblaizin?lang=en" target=_blank><img src="images/twicon.png"></a><a href="https://www.instagram.com/sabineblaizin/" target=_blank><img src="images/igicon.png"></a></div>
+	<center><a id="contp" href="contact.html">CONTACT</a></center>
+	<div id="footicon"><a href="#openModal"><img src="images/scloud.png"></a> <a href="https://www.facebook.com/Oyasound/" target=_blank><img src="images/fbicon.png"></a> <a href="https://twitter.com/sabineblaizin?lang=en" target=_blank><img src="images/twicon.png"></a> <a href="https://www.instagram.com/sabineblaizin/" target=_blank><img src="images/igicon.png"></a></div>
 </footer>
 </body>
 </html>

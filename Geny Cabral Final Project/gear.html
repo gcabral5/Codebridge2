@@ -5,17 +5,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Rock+Salt" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
-		input[type="text"]{
-			background-color: rgba(0,0,0,.75);
-			width: 50px;
-			height: 45px;
-			border-radius: 50%;
-			border: none;
+		/*input[type="text"]{
+			padding: 5px;
 			color: white;
-			margin-top: 5px;
 			text-align: center;
+		}*/
+		#ch {
+			margin-left: 10%;
 		}
-
+		#tot {
+			margin-right: 15%;
+		}
 	</style>
 </head>
 <header>
@@ -60,45 +60,55 @@
 
 
 <!-- Merch Table -->
-	<table id="merch">
+<form id="Calc">
+	<table>
 		<tr>
 			<td class="gearitem">
 			<img class="gearimg" src="images/shirtdressw.jpg">
-			<div class="geardes">Oya Tee $35.00  <input type="button" class="addto" value="Add" onclick="Calc.merchshop.sc += '35.00'"></div>
+			<div class="geardes">Storm Tee $35.00  <input type="button" class="addto" value="Add" onclick="Calc.total.value += '+35.00'"></div>
 			</td>
 			
 			<td class="gearitem">
 			<img class="gearimg" src="images/tshirt.jpg">
-			<div class="geardes">Oya Storm Tee $35.00  <input type="button" class="addto" value="Add" onclick="Calc.merchshop.sc += '35.00'"></div>
+			<div class="geardes">Skirt Tee $35.00  <input type="button" class="addto" value="Add" onclick="Calc.total.value += '+35.00'"></div>
 			</td>
 			
 			<td class="gearitem">
 			<img class="gearimg" src="images/jacket.jpg">
-			<div class="geardes">Storm Jacket $100.00  <input type="button" class="addto" value="Add" onclick="Calc.merchshop.sc += '100.00'"></div>
+			<div class="geardes">Storm Jacket $100.00  <input type="button" class="addto" value="Add" onclick="Calc.total.value += '+100.00'"></div>
 			</td>
 		</tr>
 
 		<tr>
 			<td class="gearitem" onclick="">
 			<img class="gearimg" src="images/tote.jpg">
-			<div class="geardes">Oya Tote $30.00  <input type="button" class="addto" value="Add" onclick="Calc.merchshop.sc += '30.00'"></div>
+			<div class="geardes">Skirt Tote $30.00  <input type="button" class="addto" value="Add" onclick="Calc.total.value += '+30.00'"></div>
 			</td>
 			
 			<td class="gearitem">
 			<img class="gearimg" src="images/backpack.jpg">
-			<div class="geardes">Oya Backpack $50.00  <input type="button" class="addto" value="Add" onclick="Calc.merchshop.sc += '50.00'"></div>
+			<div class="geardes">Storm Backpack $50.00  <input type="button" class="addto" value="Add" onclick="Calc.total.value += '+50.00'"></div>
 			</td>
 			
 			<td class="gearitem">
 			<img class="gearimg" src="images/mug.jpg">
-			<div class="geardes">Oya Mug $20.00  <input type="button" class="addto" value="Add" onclick="Calc.merchshop.sc += '20.00'"></div>
+			<div class="geardes">Skirt Mug $20.00  <input type="button" class="addto" value="Add" onclick="Calc.total.value += '+20.00'"></div>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="3">
+				<a id="tot" onclick="Calc.total.value = eval(Calc.total.value)">TOTAL</a><input type="text" name="" id="total"><a id ="ch" onclick="check()">CHECKOUT</a>
 			</td>
 		</tr>
 	</table>
+</form>	
 
-<div id="merchshop">
-<input type="text" name="" id="sc">
-</div>	
+<script type="text/javascript">
+	function check() {
+		alert("Thanks for your order!! Checkout Coming Soon!!")
+	}
+</script>
 
 
 

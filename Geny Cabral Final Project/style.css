@@ -76,7 +76,7 @@ li:hover {
 #nav {
 	position: absolute;
 	top: 3%;
-	left: 1%;
+	left: 4%;
 }
 
 #navbutton {
@@ -92,6 +92,7 @@ li:hover {
 
 #nav:hover #navcontent{
 	display: block;
+	margin-left: 6%;
 	background-color: rgba(0,0,0,.5);
 	height: 300px;
 	width: 200px;
@@ -102,10 +103,10 @@ li:hover {
 #tri {
 	position: fixed;
 	top: 22%;
-	left: 10%;
+	left: 17%;
 	border-radius: 50%;
-	height: 35px;
-	width: 35px;
+	height: 60px;
+	width: 60px;
 	padding: 0px;
 }
 
@@ -349,8 +350,9 @@ td {
 .button {
 	background: rgba(0,0,0,0);
 	border: none;
-	font-size: 14pt;
+	font-size: 18pt;
 	color: limegreen;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
 }
 .dw {
 	height: 10px;
@@ -461,11 +463,18 @@ td {
 	padding: 15px;
 	line-height: 30px;
 	border: solid white 2px;
+}
+
+#hhcontainer {
+	height: 300px;
+	width: 600px;
 	overflow: scroll;
+	margin-left: 5%;
 }
 #hhtext {
 	font-size: 20pt;
 	padding: 5%;
+	overflow: scroll;
 }
 
 /* Contact page style*/

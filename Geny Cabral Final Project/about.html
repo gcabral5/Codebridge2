@@ -41,9 +41,9 @@
 <!--Div for Bio and Images-->
 
 	<center><div id="aboutPics">
-		<img class="mySlides" src="images/sb6.jpg">
-		<img class="mySlides" src="images/sb1.png">
-		<img class="mySlides" src="images/sb7.jpg">
+		<img class="oSlides" src="images/sb6.jpg">
+		<img class="oSlides" src="images/sb1.png">
+		<img class="oSlides" src="images/sb7.jpg">
 	</div></center>
 
 	<div id="about">
@@ -53,25 +53,25 @@
 
 <!--JS for automatic slideshow-->
 	<script type="text/javascript">
-		var myIndex = 0;
-		carousel();
+		var oIndex = 0;
+		slideshow();
 
-		function carousel() {
+		function slideshow() {
 			var i;
-			var x = document.getElementsByClassName("mySlides");
+			var x = document.getElementsByClassName("oSlides");
 			for(i = 0; i < x.length; i++) {
 				x[i].style.display = "none";
 			}
-			myIndex++;
-			if(myIndex > x.length) {myIndex = 1}
-			x[myIndex-1].style.display = "block";
-			setTimeout(carousel, 2000);
+			oIndex++;
+			if(oIndex > x.length) {oIndex = 1}
+			x[oIndex-1].style.display = "block";
+			setTimeout(slideshow, 2000);
 		}
 	</script>
 
 
 <!--Soundcloud Modal (hidden)-->
-	<div id="openModal" class="modalDialog">
+	<div id="soundMod" class="modalDialog">
 		<div class="boxy">
 			<a href="#close" title="Close" class="close">X</a>
 			<iframe width="100%" height="300" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/606060&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
@@ -81,7 +81,7 @@
 
 <footer>
 	<center><a id="contp" href="contact.html">CONTACT</a></center>
-	<div id="footicon"><a href="#openModal"><img src="images/scloud.png"></a> <a href="https://www.facebook.com/Oyasound/" target=_blank><img src="images/fbicon.png"></a> <a href="https://twitter.com/sabineblaizin?lang=en" target=_blank><img src="images/twicon.png"></a> <a href="https://www.instagram.com/sabineblaizin/" target=_blank><img src="images/igicon.png"></a></div>
+	<div id="footicon"><a href="#soundMod"><img src="images/scloud.png"></a> <a href="https://www.facebook.com/Oyasound/" target=_blank><img src="images/fbicon.png"></a> <a href="https://twitter.com/sabineblaizin?lang=en" target=_blank><img src="images/twicon.png"></a> <a href="https://www.instagram.com/sabineblaizin/" target=_blank><img src="images/igicon.png"></a></div>
 </footer>
 </body>
 </html>

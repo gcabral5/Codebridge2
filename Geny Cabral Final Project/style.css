@@ -45,6 +45,9 @@ body {
 	z-index: -100;
 }
 
+#audio {
+	display: none;
+}
 /*--General/Nav Menu--*/
 a	{
 	text-decoration: none;
